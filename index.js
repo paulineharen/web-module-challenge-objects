@@ -6,15 +6,25 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, price, category){
-    /* Code here */
-}
+function createMenuItem(itemName, itemPrice, itemCategory){
+  const newitem = {name: itemName, price: itemPrice, category: itemCategory};
+  return newitem;
+  }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
 
+const soda = createMenuItem ("Soda", 3, "Drinks");
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+const cheeseburger = createMenuItem("Cheeseburger", 20, "Lunch");
+
+const muffin = createMenuItem("Muffin", 4, "Snacks")
+
+console.log ({soda, cheeseburger, muffin});
+
+
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. 
+Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
 
@@ -23,6 +33,23 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+
+burger.discount= function lunchSpecial(who) {
+  if(who === "teacher") {
+    return "13.5";
+  }
+  if(who === "student") {
+    return "13.5";
+  }
+  if(who === "public") {
+    return "16.2";
+  }
+return lunchSpecial;
+}
+
+burger.discount("public");
+
 
 
 
@@ -40,11 +67,21 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+reviews[8] = {name:"Jackson", rating: 5.5, feedback: "I really dug the place. The price is a but expensive but pays for the atmosphere."}
+
+console.log (reviews);
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews);
+
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
