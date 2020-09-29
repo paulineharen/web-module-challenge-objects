@@ -114,6 +114,15 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview(/* code here */) {
+
+
+console.log(reviews.slice(-1));
+
+
+
+
+
+
     /* code here */
   } 
 
